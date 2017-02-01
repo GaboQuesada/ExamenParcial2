@@ -30,15 +30,21 @@ public class BookTypeWebservice {
     @Context
     private UriInfo context;
 
+    /**
+     *
+     */
     public BookTypeWebservice() {
     }
 
-   
-
+    /**
+     *
+     * @param name
+     * @return
+     */
     @GET
     @Path("/{name}")
     @Produces(MediaType.APPLICATION_JSON)
-    public BookType getPacientebyName(@PathParam("name") String name) {
+    public BookType getbyName(@PathParam("name") String name) {
         BookType student = null;
         bookTypeDAO = new BookTypeDAOImpl();
         bookTypeService = new BookTypeServiceImpl(bookTypeDAO);
@@ -48,11 +54,16 @@ public class BookTypeWebservice {
         return student;
     }
 
+    /**
+     *
+     * @param student
+     * @return
+     */
     @POST
     @Path("/")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public BookType createStudent(BookType student) {
+    public BookType createBookType(BookType student) {
 
         bookTypeDAO = new BookTypeDAOImpl();
         bookTypeService = new BookTypeServiceImpl(bookTypeDAO);
@@ -61,16 +72,19 @@ public class BookTypeWebservice {
 
         return student;
     }
-    
+
+    /**
+     *
+     * @return
+     */
     @DELETE
     @Path("/")
-    public boolean deleteStudent() {
+    public boolean deleteALL() {
         boolean result;
         bookTypeDAO = new BookTypeDAOImpl();
         bookTypeService = new BookTypeServiceImpl(bookTypeDAO);
 
-        result= bookTypeService.deleteAll();
-      
+        result = bookTypeService.deleteAll();
 
         return result;
     }
