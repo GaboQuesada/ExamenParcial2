@@ -1,7 +1,4 @@
-
 package ac.cr.una.backend.service;
-
-
 
 import ac.cr.una.backend.dao.BookTypeDAO;
 import ac.cr.una.backend.model.BookType;
@@ -11,15 +8,20 @@ import java.util.List;
  *
  * @author Gabo Quesada
  */
+public class BookTypeServiceImpl implements BookTypeService {
 
-
-public class BookTypeServiceImpl implements BookTypeService{
-    
     private BookTypeDAO bookTypeDAO;
 
+    /**
+     *
+     */
     public BookTypeServiceImpl() {
     }
 
+    /**
+     *
+     * @param bookTypeDAO
+     */
     public BookTypeServiceImpl(BookTypeDAO bookTypeDAO) {
         this.bookTypeDAO = bookTypeDAO;
     }
@@ -31,15 +33,14 @@ public class BookTypeServiceImpl implements BookTypeService{
 
     @Override
     public BookType save(BookType bookType) {
-      
+
         return bookTypeDAO.save(bookType);
-        
+
     }
 
     @Override
     public BookType findByName(String name) {
-      return bookTypeDAO.findByName(name);
+        return bookTypeDAO.findByName(name);
     }
 
-  
 }

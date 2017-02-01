@@ -1,4 +1,3 @@
-
 package ac.cr.una.backend.dao;
 
 import ac.cr.una.backend.model.Author;
@@ -9,11 +8,9 @@ import org.hibernate.Session;
  *
  * @author Gabo Quesada
  */
+public class AuthorDAOImpl implements AuthorDAO {
 
-
-public class AuthorDAOImpl implements AuthorDAO{
-private final Session session = HibernateUtil.getSessionFactory().openSession();
-
+    private final Session session = HibernateUtil.getSessionFactory().openSession();
 
     @Override
     public Author findByName(String name) {
@@ -27,5 +24,5 @@ private final Session session = HibernateUtil.getSessionFactory().openSession();
 
         return author;
     }
-    
+
 }

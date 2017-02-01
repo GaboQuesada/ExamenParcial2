@@ -40,7 +40,7 @@ public class Book implements Serializable {
     private Date dateRelease;
     @Column(name = "price", unique = true, nullable = false)
     private Float price;
-    
+
     /**
      *
      */
@@ -211,5 +211,4 @@ public class Book implements Serializable {
         return "Book{" + "idBook=" + idBook + ", idauthor=" + idauthor + ", idType=" + idType + ", name=" + name + ", dateRelease=" + dateRelease + ", price=" + price + '}';
     }
 
-   
 }

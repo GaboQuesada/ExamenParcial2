@@ -18,7 +18,6 @@ import javax.persistence.UniqueConstraint;
  *
  * @author Gabo Quesada
  */
-
 @Entity
 @Table(name = "authorcontact", catalog = "progra3_exa2", uniqueConstraints = {
     @UniqueConstraint(columnNames = "idAuthorContact")})
@@ -157,13 +156,9 @@ public class AuthorContact implements Serializable {
         return true;
     }
 
-    
-    
-    
     @Override
     public String toString() {
         return "AuthorContact{" + "idAuthorContact=" + idAuthorContact + ", author=" + author + ", contact=" + contact + ", type=" + type + '}';
     }
-    
-    
+
 }

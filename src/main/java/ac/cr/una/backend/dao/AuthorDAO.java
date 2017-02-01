@@ -1,4 +1,3 @@
-
 package ac.cr.una.backend.dao;
 
 import ac.cr.una.backend.model.Author;
@@ -7,10 +6,8 @@ import ac.cr.una.backend.model.Author;
  *
  * @author Gabo Quesada
  */
-
-
 public interface AuthorDAO {
-    
+
     /**
      *
      * @param name

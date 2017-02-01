@@ -17,7 +17,7 @@ public class AuthorContactDAOImpl implements AuthorContactDAO {
 
     @Override
     public boolean deleteAll() {
-          boolean isDeleted = false;
+        boolean isDeleted = false;
 
         session.beginTransaction();
 
@@ -28,7 +28,7 @@ public class AuthorContactDAOImpl implements AuthorContactDAO {
             AuthorContact book = (AuthorContact) i.next();
             session.delete(book);
             session.getTransaction().commit();
-            
+
         }
         isDeleted = true;
 

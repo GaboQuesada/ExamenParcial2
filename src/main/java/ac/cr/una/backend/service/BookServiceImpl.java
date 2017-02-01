@@ -14,17 +14,32 @@ public class BookServiceImpl implements BookService {
 
     private BookDAO bookDAO;
 
+    /**
+     *
+     */
     public BookServiceImpl() {
     }
 
+    /**
+     *
+     * @param bookDAO
+     */
     public BookServiceImpl(BookDAO bookDAO) {
         this.bookDAO = bookDAO;
     }
 
+    /**
+     *
+     * @return
+     */
     public BookDAO getBookDAO() {
         return bookDAO;
     }
 
+    /**
+     *
+     * @param bookDAO
+     */
     public void setBookDAO(BookDAO bookDAO) {
         this.bookDAO = bookDAO;
     }
@@ -48,19 +63,17 @@ public class BookServiceImpl implements BookService {
     public Float totalPriceAll() {
 
         List<Book> lista = bookDAO.findAll();
-        
+
         int tan = lista.size();
         float calculo = 0;
-        
-        for(int i=0 ; i < tan ;i++)
-        {
-        
-            calculo= calculo + lista.get(i).getPrice();
-        
+
+        for (int i = 0; i < tan; i++) {
+
+            calculo = calculo + lista.get(i).getPrice();
+
         }
-       
+
         return calculo;
-        
 
     }
 

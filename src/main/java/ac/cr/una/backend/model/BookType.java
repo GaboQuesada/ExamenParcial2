@@ -14,7 +14,6 @@ import javax.persistence.UniqueConstraint;
  *
  * @author Gabo Quesada
  */
-
 @Entity
 @Table(name = "booktype", catalog = "progra3_exa2", uniqueConstraints = {
     @UniqueConstraint(columnNames = "idType")})
@@ -109,5 +108,4 @@ public class BookType implements Serializable {
         return "BookType{" + "idType=" + idType + ", type=" + type + '}';
     }
 
-    
 }

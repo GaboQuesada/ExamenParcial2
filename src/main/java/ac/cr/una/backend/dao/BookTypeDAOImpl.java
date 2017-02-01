@@ -19,7 +19,6 @@ public class BookTypeDAOImpl implements BookTypeDAO {
     @Override
     public boolean deleteAll() {
 
-      
         boolean isDeleted = false;
 
         session.beginTransaction();
@@ -31,7 +30,7 @@ public class BookTypeDAOImpl implements BookTypeDAO {
             BookType book = (BookType) i.next();
             session.delete(book);
             session.getTransaction().commit();
-            
+
         }
         isDeleted = true;
 
@@ -59,7 +58,5 @@ public class BookTypeDAOImpl implements BookTypeDAO {
 
         return bookType;
     }
-
-
 
 }
