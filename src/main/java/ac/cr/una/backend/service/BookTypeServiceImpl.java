@@ -41,12 +41,5 @@ public class BookTypeServiceImpl implements BookTypeService{
       return bookTypeDAO.findByName(name);
     }
 
-    @Override
-    public List<BookType> findAll() {
-       return bookTypeDAO.findAll();
-    }
-    
-    
-    
-    
+  
 }

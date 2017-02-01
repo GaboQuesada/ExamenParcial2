@@ -15,5 +15,5 @@ public interface BookTypeService {
     public boolean deleteAll();
     public BookType save(BookType bookType);
     public BookType findByName(String name);
-    public List<BookType> findAll();
+  
 }

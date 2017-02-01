@@ -33,18 +33,7 @@ public class BookTypeWebservice {
     public BookTypeWebservice() {
     }
 
-    @GET
-    @Path("/")
-    @Produces(MediaType.APPLICATION_JSON)
-    public List<BookType> getAllStudents() {
-        List<BookType> studentList = null;
-        bookTypeDAO = new BookTypeDAOImpl();
-        bookTypeService = new BookTypeServiceImpl(bookTypeDAO);
-
-        studentList = bookTypeService.findAll();
-
-        return studentList;
-    }
+   
 
     @GET
     @Path("/{name}")

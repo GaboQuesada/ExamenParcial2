@@ -60,13 +60,6 @@ public class BookTypeDAOImpl implements BookTypeDAO {
         return bookType;
     }
 
-    @Override
-    public List<BookType> findAll() {
-        List<BookType> enfermedadList = new ArrayList<>();
 
-        enfermedadList = session.createCriteria(BookType.class).list();
-
-        return enfermedadList;
-    }
 
 }
